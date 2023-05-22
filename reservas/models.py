@@ -1,3 +1,54 @@
 from django.db import models
 
-# Create your models here.
+"""
+Nombre del modelo: Empleado.
+Los campos son:
+
+nombre: texto
+
+apellido: texto
+
+numero_legajo: entero
+
+activo: boolean (default=True)
+"""
+
+
+class Empleado(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    numero_legajo = models.IntegerField(unique=True)
+    activo = models.BooleanField(default=1, blank=False)
+
+    def __str__(self):
+        return f"{self.nombre} {self.apellido} {self.numero_legajo}  {self.activo} "
+
+
+"""Nombre del modelo: Coordinador. 
+Los campos son:
+
+nombre: texto
+
+apellido: texto
+
+numero_documento: entero
+
+fecha_alta: datetime
+
+activo: boolean (default=True)
+"""
+
+
+class Coordinador(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    numero_documento = models.IntegerField(unique=True)
+    fecha_alta = models.DateField()
+    activo = models.BooleanField(default=1, blank=False)
+
+
+    def __str__(self):
+        return f"{self.nombre} {self.apellido} {self.numero_documento}  {self.fecha_alta}{self.activo} "
+
+
+
