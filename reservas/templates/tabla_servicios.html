@@ -16,8 +16,7 @@
         <td>{{ s.nombre }}</td>
         <td>{{ s.descripcion }}</td>
         <td>{{ s.precio }}</td>
-        <td>{{ s.activo }}</td>
-        {% if p.is_active %}
+        {% if s.activo %}
           <td>
             <i class="fa-regular fa-thumbs-up" style="color: #57db83;"></i>
           </td>
@@ -27,7 +26,7 @@
           </td>
         {% endif %}
         <td>
-          <a class="btn btn-danger" href="{% url 'person-delete' p.id %}">
+          <a class="btn btn-danger" href="#">
             <i class="fa-sharp fa-solid fa-trash"></i>
           </a>
         </td>
