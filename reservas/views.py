@@ -21,3 +21,4 @@ def alta_empleado_view(request):
     else:
         return render(request, "alta_empleado.html", context)
 
+def empleado_activa(request):
