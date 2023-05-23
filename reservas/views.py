@@ -7,7 +7,7 @@ from .forms import InputForm
 from .models import Empleado
 
 
-def alta_empleado_view(request):
+def alta_empleado_vista(request):
     context = {'form': InputForm()}
     if request.method == "POST":
         post = InputForm()
