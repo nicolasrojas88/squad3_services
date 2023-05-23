@@ -20,9 +20,9 @@ def alta_empleado_view(request):
     else:
         return render(request, "alta_empleado.html", context)
 
-<<<<<<< HEAD
+
 def empleado_activa(request):
-=======
+ pass
 
 def servicio_vista(request, servicio_id):
     servicio = Servicio.objects.filter(id=servicio_id).first()
@@ -32,4 +32,4 @@ def servicio_vista(request, servicio_id):
 def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
->>>>>>> 89208f9b416e2cd8231f180ee10f8e379a8189e3
+
