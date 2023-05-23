@@ -1,3 +1,5 @@
 .idea/misc.xml
 .idea/squad3_services.iml
 db.sqlite3
+*.pyc
+

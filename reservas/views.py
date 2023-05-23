@@ -1,13 +1,12 @@
 from django.shortcuts import render
-from django.shortcuts import render
 from .forms import InputForm
 
 
 # Create your views here.
-from .models import Empleado
+from .models import Empleado,Servicio
 
 
-def alta_empleado_vista(request):
+def alta_empleado_view(request):
     context = {'form': InputForm()}
     if request.method == "POST":
         post = InputForm()
@@ -21,4 +20,16 @@ def alta_empleado_vista(request):
     else:
         return render(request, "alta_empleado.html", context)
 
+<<<<<<< HEAD
 def empleado_activa(request):
+=======
+
+def servicio_vista(request, servicio_id):
+    servicio = Servicio.objects.filter(id=servicio_id).first()
+    return render(request, 'servicio.html', {'servicio': servicio})
+
+
+def servicios_vista(request):
+    servicios = Servicio.objects.all()
+    return render(request, 'servicios.html', {'servicios': servicios})
+>>>>>>> 89208f9b416e2cd8231f180ee10f8e379a8189e3
