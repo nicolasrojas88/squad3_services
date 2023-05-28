@@ -8,3 +8,5 @@ from reservas.models import Empleado, Coordinador, Servicio
 @admin.register(Servicio)
 class ServicioAdmin(admin.ModelAdmin):
     list_display = ('id', 'nombre', 'descripcion', 'precio', 'activo')
+    search_fields = ('nombre',)
+    list_filter = ('activo',)
