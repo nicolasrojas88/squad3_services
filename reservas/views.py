@@ -6,7 +6,7 @@ from .forms import InputForm
 from .models import Empleado,Servicio
 
 
-def alta_empleado_view(request):
+def alta_empleado_vista(request):
     context = {'form': InputForm()}
     if request.method == "POST":
         post = InputForm()
@@ -21,6 +21,9 @@ def alta_empleado_view(request):
         return render(request, "alta_empleado.html", context)
 
 
+def empleado_activa(request):
+ pass
+
 def servicio_vista(request, servicio_id):
     servicio = Servicio.objects.filter(id=servicio_id).first()
     return render(request, 'servicio.html', {'servicio': servicio})
@@ -29,3 +32,4 @@ def servicio_vista(request, servicio_id):
 def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
+
