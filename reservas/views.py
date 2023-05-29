@@ -32,7 +32,7 @@ def empleado_activa(request, id_legajo):
 def empleado_desactiva(request, id_legajo):
 
     emp = Empleado.objects.get(numero_legajo=id_legajo)
-    emp.activo = 1  # set it to whatever you want to update
+    emp.activo = 0  # set it to whatever you want to update
     emp.save()
     return HttpResponse ("se DESactivo,se grabo" )
 
