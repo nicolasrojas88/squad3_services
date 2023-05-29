@@ -12,4 +12,3 @@ class ServicioAdmin(admin.ModelAdmin):
 @admin.register(Cliente)
 class ClienteAdmin(admin.ModelAdmin):
     list_display= ('id', 'nombre', 'apellido', 'activo')
-
