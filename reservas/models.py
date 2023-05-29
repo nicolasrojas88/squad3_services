@@ -3,13 +3,9 @@ from django.db import models
 """
 Nombre del modelo: Empleado.
 Los campos son:
-
 nombre: texto
-
 apellido: texto
-
 numero_legajo: entero
-
 activo: boolean (default=True)
 """
 
@@ -26,15 +22,10 @@ class Empleado(models.Model):
 
 """Nombre del modelo: Coordinador. 
 Los campos son:
-
 nombre: texto
-
 apellido: texto
-
 numero_documento: entero
-
 fecha_alta: datetime
-
 activo: boolean (default=True)
 """
 
@@ -48,7 +39,7 @@ class Coordinador(models.Model):
 
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido} {self.numero_documento}  {self.fecha_alta}{self.activo} "
+        return f"{self.nombre} {self.apellido} {self.numero_documento} {self.fecha_alta} {self.activo} "
 
 
 class Servicio(models.Model):
@@ -56,6 +47,14 @@ class Servicio(models.Model):
     descripcion = models.CharField(max_length=200)
     precio = models.IntegerField()
     activo = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"{self.nombre} {self.apellido}"
+
+class Cliente(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    activo = models.BooleanField(default= True)
 
     def __str__(self):
         return f"{self.nombre}"
