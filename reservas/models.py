@@ -58,3 +58,14 @@ class Cliente(models.Model):
 
     def __str__(self):
         return f"{self.nombre}"
+
+
+
+class ReservaServicio(models.Model):
+    fecha_creacion = models.DateField(auto_now_add=True)
+    fecha_reserva = models.DateField()
+    cliente = models.ForeignKey(Cliente,on_delete=models.CASCADE)
+    responsable = models.ForeignKey(Coordinador,on_delete=models.CASCADE)
+    empleado= models.ForeignKey(Empleado,on_delete=models.CASCADE)
+    servicio=models.ForeignKey(Servicio,on_delete=models.CASCADE)
+    precio = models.IntegerField()
