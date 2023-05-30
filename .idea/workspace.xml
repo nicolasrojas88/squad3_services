@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/prueba.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/prueba.html" afterDir="false" />
+    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="se registra mod ReservaServicio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/features/ari.choc/crea_registro_reserva_serv" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -73,6 +72,7 @@
       <updated>1685460042583</updated>
       <workItem from="1685460045656" duration="1237000" />
       <workItem from="1685461311825" duration="632000" />
+      <workItem from="1685476708023" duration="2902000" />
     </task>
     <servers />
   </component>
@@ -89,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="se registra mod ReservaServicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="se registra mod ReservaServicio" />
   </component>
 </project>
