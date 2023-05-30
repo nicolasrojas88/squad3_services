@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from reservas.models import Empleado, Coordinador, Servicio, Cliente
+from reservas.models import Empleado, Coordinador, Servicio, Cliente,ReservaServicio
 
 admin.site.register([Coordinador])
+admin.site.register([ReservaServicio])
 @admin.register(Empleado)
 class Empleado(admin.ModelAdmin):
     list_display = ('nombre', 'apellido', 'numero_legajo', 'activo')
