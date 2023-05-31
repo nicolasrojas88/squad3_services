@@ -45,6 +45,12 @@ def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
 
+
+def empleados_vista(request):
+    empleados = Empleado.objects.all()
+    return render(request, 'empleados.html', {'empleados': empleados})
+  
+  
 def actualizar_empleado_vista(request, empleado_id):
     actualizar_empleado = Empleado.objects.filter(id=empleado_id).first()
     form = EmpleadoForm(instance=actualizar_empleado)
@@ -55,3 +61,4 @@ def actualizar_empleado_vista(request, empleado_id):
             return redirect('empleados')
 
     return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
+
