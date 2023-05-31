@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .forms import InputForm
+from .forms import InputForm, EmpleadoForm
 
 # Create your views here.
 from .models import Empleado, Servicio
