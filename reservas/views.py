@@ -44,3 +44,14 @@ def servicio_vista(request, servicio_id):
 def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
+
+def actualizar_empleado_vista(request, empleado_id):
+    actualizar_empleado = Empleado.objects.filter(id=empleado_id).first()
+    form = EmpleadoForm(instance=actualizar_empleado)
+    if request.method == "POST":
+        form = EmpleadoForm(request.POST, instance=actualizar_empleado)
+        if form.is_valid():
+            form.save()
+            return redirect('empleados')
+
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
