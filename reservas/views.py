@@ -44,3 +44,8 @@ def servicio_vista(request, servicio_id):
 def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
+
+
+def empleados_vista(request):
+    empleados = Empleado.objects.all()
+    return render(request, 'empleados.html', {'empleados': empleados})
