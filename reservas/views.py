@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import InputForm, EmpleadoForm
 
 # Create your views here.
-from .models import Empleado, Servicio
+from .models import Empleado, Servicio, Coordinador
 
 
 def alta_empleado_vista(request):
@@ -62,3 +62,7 @@ def actualizar_empleado_vista(request, empleado_id):
 
     return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
 
+
+def coordinadores_vista(request):
+    coordinadores = Coordinador.objects.all()
+    return render(request, 'coordinadores.html', {'coordinadores': coordinadores})
