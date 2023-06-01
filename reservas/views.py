@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from .forms import InputForm
+from django.shortcuts import render, redirect
+from .forms import InputForm, EmpleadoForm
 
 # Create your views here.
 from .models import Empleado, Servicio
@@ -44,3 +44,21 @@ def servicio_vista(request, servicio_id):
 def servicios_vista(request):
     servicios = Servicio.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
+
+
+def empleados_vista(request):
+    empleados = Empleado.objects.all()
+    return render(request, 'empleados.html', {'empleados': empleados})
+  
+  
+def actualizar_empleado_vista(request, empleado_id):
+    actualizar_empleado = Empleado.objects.filter(id=empleado_id).first()
+    form = EmpleadoForm(instance=actualizar_empleado)
+    if request.method == "POST":
+        form = EmpleadoForm(request.POST, instance=actualizar_empleado)
+        if form.is_valid():
+            form.save()
+            return redirect('empleados')
+
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
+
