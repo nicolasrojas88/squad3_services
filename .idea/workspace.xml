@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="se registra mod ReservaServicio">
+    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="crea vista y form para crear coord">
       <change afterPath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/forms.py" afterDir="false" />
@@ -94,7 +94,7 @@
       <workItem from="1685461311825" duration="632000" />
       <workItem from="1685476708023" duration="3040000" />
       <workItem from="1685578046668" duration="1380000" />
-      <workItem from="1685730597201" duration="9204000" />
+      <workItem from="1685730597201" duration="9256000" />
     </task>
     <task id="LOCAL-00001" summary="se registra mod ReservaServicio">
       <created>1685483542200</created>
@@ -122,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se registra mod ReservaServicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="se registra mod ReservaServicio" />
+    <MESSAGE value="crea vista y form para crear coord" />
+    <option name="LAST_COMMIT_MESSAGE" value="crea vista y form para crear coord" />
   </component>
 </project>
