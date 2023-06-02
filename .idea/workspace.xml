@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="se registra mod ReservaServicio">
+      <change afterPath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/features/ari.choc/crea_registro_reserva_serv" />
@@ -25,17 +40,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QWCdbBU7pxo420kSTFAuyyzMTE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="squad3_services" type="Python.DjangoServer" factoryName="Django server">
       <module name="squad3_services" />
@@ -72,8 +92,18 @@
       <updated>1685460042583</updated>
       <workItem from="1685460045656" duration="1237000" />
       <workItem from="1685461311825" duration="632000" />
-      <workItem from="1685476708023" duration="2902000" />
+      <workItem from="1685476708023" duration="3040000" />
+      <workItem from="1685578046668" duration="1380000" />
+      <workItem from="1685730597201" duration="9204000" />
     </task>
+    <task id="LOCAL-00001" summary="se registra mod ReservaServicio">
+      <created>1685483542200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685483542200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

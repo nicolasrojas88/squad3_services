@@ -19,17 +19,6 @@ class Empleado(models.Model):
     def __str__(self):
         return f"{self.nombre} {self.apellido} {self.numero_legajo}  {self.activo} "
 
-
-"""Nombre del modelo: Coordinador. 
-Los campos son:
-nombre: texto
-apellido: texto
-numero_documento: entero
-fecha_alta: datetime
-activo: boolean (default=True)
-"""
-
-
 class Coordinador(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
