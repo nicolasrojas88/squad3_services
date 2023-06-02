@@ -9,5 +9,5 @@ urlpatterns =[
     path("empleado/desactivar/<id_legajo>/", views.empleado_desactiva, name="empleado_activa"),
     path('empleados/listado', views.empleados_vista, name="empleados"),
     path('empleados/modificar/<int:empleado_id>', views.actualizar_empleado_vista, name="actualizar_empleado"),
-
+    path('coordinadores/listado', views.coordinadores_vista, name="coordinadores"),
 ]
