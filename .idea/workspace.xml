@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="crea vista y form para crear coord">
-      <change afterPath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +41,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="squad3_services" type="Python.DjangoServer" factoryName="Django server">
       <module name="squad3_services" />
@@ -94,7 +88,8 @@
       <workItem from="1685461311825" duration="632000" />
       <workItem from="1685476708023" duration="3040000" />
       <workItem from="1685578046668" duration="1380000" />
-      <workItem from="1685730597201" duration="9256000" />
+      <workItem from="1685730597201" duration="9580000" />
+      <workItem from="1685751684655" duration="431000" />
     </task>
     <task id="LOCAL-00001" summary="se registra mod ReservaServicio">
       <created>1685483542200</created>
@@ -103,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685483542200</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="crea vista y form para crear coord">
+      <created>1685741227790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685741227790</updated>
+    </task>
+    <task id="LOCAL-00003" summary="crea vista y form para crear coord">
+      <created>1685741329875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685741329875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

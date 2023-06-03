@@ -3,13 +3,13 @@ from django.forms import ModelForm
 from .models import Empleado
 
 
-class Formu_Empleado(forms.Form):
+class FormuEmpleado(forms.Form):
     nombre = forms.CharField(max_length=50)
     apellido = forms.CharField(max_length=50)
     numero_legajo = forms.IntegerField()
 
 
-class Formu_Coordinador(forms.Form):
+class FormuCoordinador(forms.Form):
     nombre = forms.CharField(max_length=50)
     apellido = forms.CharField(max_length=50)
     numero_documento = forms.IntegerField()
