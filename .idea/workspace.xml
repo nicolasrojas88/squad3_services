@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="crea vista y form para crear coord">
+    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="se corrige pascal case en forms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +90,7 @@
       <workItem from="1685578046668" duration="1380000" />
       <workItem from="1685730597201" duration="9580000" />
       <workItem from="1685751684655" duration="431000" />
+      <workItem from="1685799133219" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="se registra mod ReservaServicio">
       <created>1685483542200</created>
@@ -112,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685741329875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="se corrige pascal case en forms">
+      <created>1685799341658</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685799341658</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se registra mod ReservaServicio" />
     <MESSAGE value="crea vista y form para crear coord" />
-    <option name="LAST_COMMIT_MESSAGE" value="crea vista y form para crear coord" />
+    <MESSAGE value="se corrige pascal case en forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="se corrige pascal case en forms" />
   </component>
 </project>

@@ -1,15 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import EmpleadoForm, FormuEmpleado, FormuCoordinador
+from .forms import EmpleadoForm, FormEmpleado, FormCoordinador
 from datetime import datetime
 # Create your views here.
 from .models import Empleado, Servicio, Coordinador
 
 
 def alta_empleado_vista(request):
-    context = {'form': FormuEmpleado()}
+    context = {'form': FormEmpleado()}
     if request.method == "POST":
-        post = FormuEmpleado()
+        post = FormEmpleado()
         post.nombre = request.POST['nombre']
         post.apellido = request.POST['apellido']
         post.numero_legajo = request.POST['numero_legajo']
@@ -22,9 +22,9 @@ def alta_empleado_vista(request):
 
 
 def alta_coordinador_vista(request):
-    context = {'form': FormuCoordinador()}
+    context = {'form': FormCoordinador()}
     if request.method == "POST":
-        post = FormuCoordinador()
+        post = FormCoordinador()
         post.nombre = request.POST['nombre']
         post.apellido = request.POST['apellido']
         post.numero_documento = request.POST['numero_documento']
