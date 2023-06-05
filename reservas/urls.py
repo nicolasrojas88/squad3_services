@@ -10,5 +10,6 @@ urlpatterns =[
     path('empleados/listado', views.empleados_vista, name="empleados"),
     path('empleados/modificar/<int:empleado_id>', views.actualizar_empleado_vista, name="actualizar_empleado"),
     path('coordinadores/nuevo/', views.alta_coordinador_vista, name='alta_coordinador'),
+    path('coordinadores/listado', views.coordinadores_vista, name="coordinadores"),
 
 ]
