@@ -1,40 +1,57 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import InputForm, EmpleadoForm
-
+from .forms import EmpleadoForm, FormEmpleado, FormCoordinador
+from datetime import datetime
 # Create your views here.
 from .models import Empleado, Servicio, Coordinador
 
 
 def alta_empleado_vista(request):
-    context = {'form': InputForm()}
+    context = {'form': FormEmpleado()}
     if request.method == "POST":
-        post = InputForm()
+        post = FormEmpleado()
         post.nombre = request.POST['nombre']
         post.apellido = request.POST['apellido']
         post.numero_legajo = request.POST['numero_legajo']
         graba_datos = Empleado(nombre=post.nombre, apellido=post.apellido, numero_legajo=post.numero_legajo)
         graba_datos.save()
 
-
         return render(request, "alta_empleado.html", context)
     else:
         return render(request, "alta_empleado.html", context)
 
 
-def empleado_activa(request, id_legajo):
+def alta_coordinador_vista(request):
+    context = {'form': FormCoordinador()}
+    if request.method == "POST":
+        post = FormCoordinador()
+        post.nombre = request.POST['nombre']
+        post.apellido = request.POST['apellido']
+        post.numero_documento = request.POST['numero_documento']
+        # post.fecha_alta = request.POST['fecha_alta']
+        post.fecha_alta = datetime.today().strftime('%Y-%m-%d')
+        print(post.fecha_alta)
+        graba_datos = Coordinador(nombre=post.nombre, apellido=post.apellido, numero_documento=post.numero_documento,
+                                  fecha_alta=post.fecha_alta)
+        graba_datos.save()
+        return render(request, "alta_coordinador.html", context)
+    else:
+        return render(request, "alta_coordinador.html", context)
 
+
+def empleado_activa(request, id_legajo):
     emp = Empleado.objects.get(numero_legajo=id_legajo)
     emp.activo = 1  # set it to whatever you want to update
     emp.save()
-    return HttpResponse ("se activo,se grabo" )
+    return HttpResponse("se activo,se grabo")
+
 
 def empleado_desactiva(request, id_legajo):
-
     emp = Empleado.objects.get(numero_legajo=id_legajo)
     emp.activo = 0  # set it to whatever you want to update
     emp.save()
-    return HttpResponse ("se DESactivo,se grabo" )
+    return HttpResponse("se DESactivo,se grabo")
+
 
 def servicio_vista(request, servicio_id):
     servicio = Servicio.objects.filter(id=servicio_id).first()
@@ -49,8 +66,8 @@ def servicios_vista(request):
 def empleados_vista(request):
     empleados = Empleado.objects.all()
     return render(request, 'empleados.html', {'empleados': empleados})
-  
-  
+
+
 def actualizar_empleado_vista(request, empleado_id):
     actualizar_empleado = Empleado.objects.filter(id=empleado_id).first()
     form = EmpleadoForm(instance=actualizar_empleado)
@@ -59,10 +76,10 @@ def actualizar_empleado_vista(request, empleado_id):
         if form.is_valid():
             form.save()
             return redirect('empleados')
-
     return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
 
 
 def coordinadores_vista(request):
     coordinadores = Coordinador.objects.all()
     return render(request, 'coordinadores.html', {'coordinadores': coordinadores})
+
