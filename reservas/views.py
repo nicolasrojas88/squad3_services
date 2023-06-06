@@ -83,3 +83,30 @@ def coordinadores_vista(request):
     coordinadores = Coordinador.objects.all()
     return render(request, 'coordinadores.html', {'coordinadores': coordinadores})
 
+
+def actualizar_coordinador_vista(request, coordinador_id):
+    actualizar_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
+    form = CoordinadorForm(instance=actualizar_coordinador)
+    if request.method == "POST":
+        form = CoordinadorForm(request.POST, instance=actualizar_coordinador)
+        if form.is_valid():
+            form.save()
+            return redirect('coordinadores')
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Coordinador", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
+
+
+def activar_coordinador(request, coordinador_id):
+    estado_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
+    if estado_coordinador.activo == False:
+        estado_coordinador.activo = True
+        estado_coordinador.save()
+    return redirect('coordinadores')
+
+
+def desactivar_coordinador(request, coordinador_id):
+    estado_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
+    if estado_coordinador.activo == True:
+        estado_coordinador.activo = False
+        estado_coordinador.save()
+    return redirect('coordinadores')
+
