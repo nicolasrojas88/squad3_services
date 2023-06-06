@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import EmpleadoForm, FormEmpleado, FormCoordinador
+from .forms import EmpleadoForm, FormEmpleado, FormCoordinador, CoordinadorForm
 from datetime import datetime
-# Create your views here.
 from .models import Empleado, Servicio, Coordinador
 
 
@@ -76,10 +75,21 @@ def actualizar_empleado_vista(request, empleado_id):
         if form.is_valid():
             form.save()
             return redirect('empleados')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado})
+    return render(request, 'form_generico.html',{"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados'})
 
 
 def coordinadores_vista(request):
     coordinadores = Coordinador.objects.all()
     return render(request, 'coordinadores.html', {'coordinadores': coordinadores})
+
+
+def actualizar_coordinador_vista(request, coordinador_id):
+    actualizar_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
+    form = CoordinadorForm(instance=actualizar_coordinador)
+    if request.method == "POST":
+        form = CoordinadorForm(request.POST, instance=actualizar_coordinador)
+        if form.is_valid():
+            form.save()
+            return redirect('coordinadores')
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Coordinador", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
 

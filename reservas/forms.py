@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Empleado
+from .models import Empleado, Coordinador
 
 
 class FormEmpleado(forms.Form):
@@ -21,3 +21,10 @@ class EmpleadoForm(ModelForm):
         model = Empleado
         fields = ['nombre', 'apellido', 'numero_legajo']
         labels = {'numero_legajo': 'N° de Legajo'}
+
+
+class CoordinadorForm(ModelForm):
+    class Meta:
+        model = Coordinador
+        fields = ['nombre', 'apellido', 'numero_documento', 'fecha_alta']
+        labels = {'numero_documento': 'DNI'}

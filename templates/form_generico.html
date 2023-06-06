@@ -7,8 +7,8 @@
 
         {{ form.as_p }}
 
-        <input type="submit" value="{{ submit_value }}">
-        <a href="{% url 'empleados' %}">Volver</a>
+        <input class="btn btn-primary" type="submit" value="{{ submit_value }}">
+        <a href="{% url url_value %}" class="btn btn-primary">Volver</a>
     </form>
 
 {% endblock %}
