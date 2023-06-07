@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(' ', ../project/views.index, name="homepage"),
     path('', include('reservas.urls')),
 
 ]
