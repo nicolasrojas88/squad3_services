@@ -26,5 +26,5 @@ class EmpleadoForm(ModelForm):
 class CoordinadorForm(ModelForm):
     class Meta:
         model = Coordinador
-        fields = ['nombre', 'apellido', 'numero_documento', 'fecha_alta']
-        labels = {'numero_documento': 'DNI'}
+        fields = ['nombre', 'apellido', 'numero_documento']
+        labels = {'nombre': 'Ingrese Nombre', 'apellido': 'Ingrese Apellido', 'numero_documento': 'DNI'}

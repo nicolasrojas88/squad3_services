@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 
 {% block 'content' %}
-
-    <form action="#" method="post">
+<div class="i-am-centered">
+    <form action="#" method="post" class="col-8">
         {% csrf_token %}
 
         {{ form.as_p }}
-
-        <input class="btn btn-primary" type="submit" value="{{ submit_value }}">
-        <a href="{% url url_value %}" class="btn btn-primary">Volver</a>
+            <input class="btn btn-primary" type="submit" value="{{ submit_value }}">
+            <a href="{% url url_value %}" class="btn btn-primary">Volver</a>
     </form>
-
+</div>
 {% endblock %}
 

@@ -91,7 +91,7 @@ def actualizar_coordinador_vista(request, coordinador_id):
         if form.is_valid():
             form.save()
             return redirect('coordinadores')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Coordinador", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
 
 def activar_coordinador(request, coordinador_id):
     estado_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
