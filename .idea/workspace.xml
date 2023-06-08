@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="correcciones en urls, y base.htm">
+    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="Actualización de vistas y CRUD Coordinadores y Empleados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_coordinadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_coordinadores.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_empleados.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_empleados.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_servicios.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_servicios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form_generico.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_generico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686169877489</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Actualización de vistas y CRUD Coordinadores y Empleados">
+      <created>1686255960229</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686255960229</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +192,7 @@
     <MESSAGE value="navbar con links" />
     <MESSAGE value="Home Page agregado a templantes(principal)" />
     <MESSAGE value="correcciones en urls, y base.htm" />
-    <option name="LAST_COMMIT_MESSAGE" value="correcciones en urls, y base.htm" />
+    <MESSAGE value="Actualización de vistas y CRUD Coordinadores y Empleados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización de vistas y CRUD Coordinadores y Empleados" />
   </component>
 </project>
