@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="navbar con links">
-      <change afterPath="$PROJECT_DIR$/project/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/homepage.html" afterDir="false" />
+    <list default="true" id="8083d1c6-05b5-4699-be0b-8d7374dc0cd7" name="Changes" comment="correcciones en urls, y base.htm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_coordinador.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/alta_empleado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_coordinadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_coordinadores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_empleados.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_empleados.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/templates/tabla_servicios.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/templates/tabla_servicios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form_generico.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_generico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686165574484</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Home Page agregado a templantes(principal)">
+      <created>1686168963143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686168963143</updated>
+    </task>
+    <task id="LOCAL-00008" summary="correcciones en urls, y base.htm">
+      <created>1686169877489</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686169877489</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +190,8 @@
     <MESSAGE value="crea vista y form para crear coord" />
     <MESSAGE value="se corrige pascal case en forms" />
     <MESSAGE value="navbar con links" />
-    <option name="LAST_COMMIT_MESSAGE" value="navbar con links" />
+    <MESSAGE value="Home Page agregado a templantes(principal)" />
+    <MESSAGE value="correcciones en urls, y base.htm" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcciones en urls, y base.htm" />
   </component>
 </project>
