@@ -26,5 +26,5 @@ class EmpleadoForm(ModelForm):
 class CoordinadorForm(ModelForm):
     class Meta:
         model = Coordinador
-        fields = ['nombre', 'apellido', 'numero_documento', 'fecha_alta']
+        fields = ['nombre', 'apellido', 'numero_documento']
         labels = {'numero_documento': 'DNI'}

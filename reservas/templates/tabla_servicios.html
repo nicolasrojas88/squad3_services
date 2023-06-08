@@ -1,36 +1,57 @@
-<table class="table text-center">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Descripcion</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Esta activo?</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for s in servicios %}
-      <tr>
-        <th scope="row">{{ s.id }}</th>
-        <td>{{ s.nombre }}</td>
-        <td>{{ s.descripcion }}</td>
-        <td>{{ s.precio }}</td>
-        {% if s.activo %}
-          <td>
-            <i class="fa-regular fa-thumbs-up" style="color: #57db83;"></i>
-          </td>
-        {% else %}
-          <td>
-            <i class="fa-regular fa-thumbs-down" style="color: #da1616;"></i>
-          </td>
-        {% endif %}
-<!--        <td>-->
-<!--          <a class="btn btn-danger" href="#">-->
-<!--            <i class="fa-sharp fa-solid fa-trash"></i>-->
-<!--          </a>-->
-<!--        </td>-->
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+
+<div class="container-md">
+		<br>
+</div>
+	<div class="d-grid gap-2">
+      <h1 align="center"> Listado de Coordinadores </h1>
+    </div>
+<div class="container-md">
+		<div class="d-grid gap-2 d-md-block">
+		<a href="#" class="btn btn-outline-info me-md-2" role="button" aria-disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+  <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+</svg>Agregar</a>
+	<div class="container-md">
+		<br>
+	</div>
+	</div>
+
+<div class="table-responsive">
+  			<table class="table align-middle">
+    			<thead class="table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Esta activo?</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in servicios %}
+          <tr>
+            <th scope="row">{{ s.id }}</th>
+            <td>{{ s.nombre }}</td>
+            <td>{{ s.descripcion }}</td>
+            <td>{{ s.precio }}</td>
+            {% if s.activo %}
+              <td>
+                <i class="fa-regular fa-thumbs-up" style="color: #57db83;"></i>
+              </td>
+            {% else %}
+              <td>
+                <i class="fa-regular fa-thumbs-down" style="color: #da1616;"></i>
+              </td>
+            {% endif %}
+    <!--        <td>-->
+    <!--          <a class="btn btn-danger" href="#">-->
+    <!--            <i class="fa-sharp fa-solid fa-trash"></i>-->
+    <!--          </a>-->
+    <!--        </td>-->
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>

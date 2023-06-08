@@ -15,7 +15,8 @@ def alta_empleado_vista(request):
         graba_datos = Empleado(nombre=post.nombre, apellido=post.apellido, numero_legajo=post.numero_legajo)
         graba_datos.save()
 
-        return render(request, "alta_empleado.html", context)
+        #return render(request, "alta_empleado.html", context)
+        return redirect('empleados')
     else:
         return render(request, "alta_empleado.html", context)
 
@@ -33,7 +34,8 @@ def alta_coordinador_vista(request):
         graba_datos = Coordinador(nombre=post.nombre, apellido=post.apellido, numero_documento=post.numero_documento,
                                   fecha_alta=post.fecha_alta)
         graba_datos.save()
-        return render(request, "alta_coordinador.html", context)
+        #return render(request, "tabla_coordinador.html", context)
+        return redirect('coordinadores')
     else:
         return render(request, "alta_coordinador.html", context)
 
@@ -75,7 +77,7 @@ def actualizar_empleado_vista(request, empleado_id):
         if form.is_valid():
             form.save()
             return redirect('empleados')
-    return render(request, 'form_generico.html',{"form": form, "submit_value": "Actualizar Empleado", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados'})
+    return render(request, 'form_generico.html',{"form": form, "submit_value": "Actualizar", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados'})
 
 
 def coordinadores_vista(request):
@@ -91,7 +93,7 @@ def actualizar_coordinador_vista(request, coordinador_id):
         if form.is_valid():
             form.save()
             return redirect('coordinadores')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar Coordinador", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
 
 def activar_coordinador(request, coordinador_id):
     estado_coordinador = Coordinador.objects.filter(id=coordinador_id).first()
