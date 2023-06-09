@@ -158,7 +158,7 @@ def alta_reserva_vista(request):
         if form.is_valid():
             form.save()
             return redirect('reservas')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'reservas'})
+    return render(request, 'form_reserva.html', {"form": form, "submit_value": "Enviar", "url_value": 'reservas'})
 
 
 def reservas_vista(request):
@@ -174,7 +174,7 @@ def actualizar_reserva_vista(request, reserva_id):
         if form.is_valid():
             form.save()
             return redirect('reservas')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_reserva': actualizar_reserva, "url_value": 'reservas'})
+    return render(request, 'form_reserva.html', {"form": form, "submit_value": "Actualizar", 'actualizar_reserva': actualizar_reserva, "url_value": 'reservas'})
 
 
 def eliminar_reserva(request, reserva_id):
