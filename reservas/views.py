@@ -41,17 +41,19 @@ def alta_coordinador_vista(request):
 
 
 def empleado_activa(request, id_legajo):
-    emp = Empleado.objects.get(numero_legajo=id_legajo)
-    emp.activo = 1  # set it to whatever you want to update
-    emp.save()
-    return HttpResponse("se activo,se grabo")
+    estado_empleado = Empleado.objects.filter(id=id_legajo).first()
+    if estado_empleado.activo == False:
+        estado_empleado.activo = True
+        estado_empleado.save()
+    return redirect('empleados')
 
 
 def empleado_desactiva(request, id_legajo):
-    emp = Empleado.objects.get(numero_legajo=id_legajo)
-    emp.activo = 0  # set it to whatever you want to update
-    emp.save()
-    return HttpResponse("se DESactivo,se grabo")
+    estado_empleado = Empleado.objects.filter(id=id_legajo).first()
+    if estado_empleado.activo == True:
+        estado_empleado.activo = False
+        estado_empleado.save()
+    return redirect('empleados')
 
 
 def servicio_vista(request, servicio_id):
@@ -206,7 +208,7 @@ def actualizar_cliente_vista(request, cliente_id):
         if form.is_valid():
             form.save()
             return redirect('clientes')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_cliente': actualizar_cliente, "url_value": 'reservas'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_cliente': actualizar_cliente, "url_value": 'clientes'})
 
 
 def activar_cliente(request, cliente_id):

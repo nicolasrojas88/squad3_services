@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import ModelForm
+from django.forms import ModelForm, widgets
 from .models import Empleado, Coordinador, Servicio, Cliente, Reserva
 
 
@@ -27,7 +27,7 @@ class CoordinadorForm(ModelForm):
     class Meta:
         model = Coordinador
         fields = ['nombre', 'apellido', 'numero_documento']
-        labels = {'numero_documento': 'DNI'}
+        labels = {'numero_documento': 'Numero de DNI'}
 
 
 class ServicioForm(ModelForm):
@@ -49,3 +49,6 @@ class ReservaForm(ModelForm):
         model = Reserva
         fields = ['fecha_reserva', 'cliente', 'servicio', 'precio', 'empleado', 'coordinador']
         labels = {'fecha_reserva': 'Fecha de Reserva'}
+        widgets = {
+            'fecha_reserva': widgets.DateInput(attrs={'type': 'date'})
+        }

@@ -11,7 +11,7 @@ urlpatterns =[
 
     path('empleados/nuevo', views.alta_empleado_vista, name='alta_empleado'),
     path('empleados/listado', views.empleados_vista, name="empleados"),
-    path('empleados/modificar/<int:empleado_id>', views.actualizar_empleado_vista, name="actualizar_empleado"),
+    path('empleados/modificar/<id_legajo>', views.actualizar_empleado_vista, name="actualizar_empleado"),
     path("empleados/activar/<id_legajo>/", views.empleado_activa, name="empleado_activa"),
     path("empleados/desactivar/<id_legajo>/", views.empleado_desactiva, name="empleado_desactiva"),
 
@@ -24,8 +24,8 @@ urlpatterns =[
     path('clientes/nuevo/', views.alta_cliente_vista, name='alta_cliente'),
     path('clientes/listado', views.clientes_vista, name="clientes"),
     path('clientes/modificar/<int:cliente_id>', views.actualizar_cliente_vista, name="actualizar_cliente"),
-    path('clientes/activar/<int:clientes_id>', views.activar_cliente, name="activar_cliente"),
-    path('clientes/desactivar/<int:clientes_id>', views.desactivar_cliente, name="desactivar_cliente"),
+    path('clientes/activar/<int:cliente_id>', views.activar_cliente, name="activar_cliente"),
+    path('clientes/desactivar/<int:cliente_id>', views.desactivar_cliente, name="desactivar_cliente"),
 
     path('reservas/nuevo/', views.alta_reserva_vista, name='alta_reserva'),
     path('reservas/listado', views.reservas_vista, name="reservas"),

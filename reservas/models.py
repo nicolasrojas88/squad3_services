@@ -14,7 +14,7 @@ class Empleado(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     numero_legajo = models.IntegerField(unique=True)
-    activo = models.BooleanField(default=1, blank=False)
+    activo = models.BooleanField(default=True, blank=False)
 
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
