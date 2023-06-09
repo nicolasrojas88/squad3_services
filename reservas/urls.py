@@ -11,9 +11,9 @@ urlpatterns =[
 
     path('empleados/nuevo', views.alta_empleado_vista, name='alta_empleado'),
     path('empleados/listado', views.empleados_vista, name="empleados"),
-    path('empleados/modificar/<id_legajo>', views.actualizar_empleado_vista, name="actualizar_empleado"),
-    path("empleados/activar/<id_legajo>/", views.empleado_activa, name="empleado_activa"),
-    path("empleados/desactivar/<id_legajo>/", views.empleado_desactiva, name="empleado_desactiva"),
+    path('empleados/modificar/<int:empleado_id>', views.actualizar_empleado_vista, name="actualizar_empleado"),
+    path("empleados/activar/<int:empleado_id>/", views.empleado_activa, name="empleado_activa"),
+    path("empleados/desactivar/<int:empleado_id>/", views.empleado_desactiva, name="empleado_desactiva"),
 
     path('coordinadores/nuevo/', views.alta_coordinador_vista, name='alta_coordinador'),
     path('coordinadores/listado', views.coordinadores_vista, name="coordinadores"),

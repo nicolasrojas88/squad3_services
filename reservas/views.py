@@ -6,19 +6,14 @@ from .models import Empleado, Servicio, Coordinador, Reserva, Cliente
 
 
 def alta_empleado_vista(request):
-    context = {'form': FormEmpleado()}
+    form = EmpleadoForm()
     if request.method == "POST":
-        post = FormEmpleado()
-        post.nombre = request.POST['nombre']
-        post.apellido = request.POST['apellido']
-        post.numero_legajo = request.POST['numero_legajo']
-        graba_datos = Empleado(nombre=post.nombre, apellido=post.apellido, numero_legajo=post.numero_legajo)
-        graba_datos.save()
-
-        #return render(request, "alta_empleado.html", context)
-        return redirect('empleados')
-    else:
-        return render(request, "alta_empleado.html", context)
+        form = EmpleadoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('empleados')
+    return render(request, 'form_generico.html',
+                  {"form": form, "submit_value": "Enviar", "url_value": 'empleados', "h1_value": 'Nuevo Empleado'})
 
 
 def alta_coordinador_vista(request):
@@ -40,16 +35,16 @@ def alta_coordinador_vista(request):
         return render(request, "alta_coordinador.html", context)
 
 
-def empleado_activa(request, id_legajo):
-    estado_empleado = Empleado.objects.filter(id=id_legajo).first()
+def empleado_activa(request, empleado_id):
+    estado_empleado = Empleado.objects.filter(id=empleado_id).first()
     if estado_empleado.activo == False:
         estado_empleado.activo = True
         estado_empleado.save()
     return redirect('empleados')
 
 
-def empleado_desactiva(request, id_legajo):
-    estado_empleado = Empleado.objects.filter(id=id_legajo).first()
+def empleado_desactiva(request, empleado_id):
+    estado_empleado = Empleado.objects.filter(id=empleado_id).first()
     if estado_empleado.activo == True:
         estado_empleado.activo = False
         estado_empleado.save()
@@ -116,7 +111,7 @@ def actualizar_empleado_vista(request, empleado_id):
         if form.is_valid():
             form.save()
             return redirect('empleados')
-    return render(request, 'form_generico.html',{"form": form, "submit_value": "Actualizar", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados', "h1_value": 'Editar Coordinador'})
 
 
 def coordinadores_vista(request):

@@ -42,7 +42,7 @@
           <td>{{ r.coordinador }}</td>
           <td>{{ r.empleado }}</td>
           <td>{{ r.servicio }}</td>
-          <td>$ {{ r.precio }}</td>
+          <td>${{ r.precio }}</td>
           <td>
             <a href="{% url 'actualizar_reserva' r.id %}" class="btn btn-outline-primary me-md-2" role="button" aria-disabled="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
