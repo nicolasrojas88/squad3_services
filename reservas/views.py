@@ -68,7 +68,7 @@ def alta_servicio_vista(request):
         if form.is_valid():
             form.save()
             return redirect('servicios')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'servicios'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'servicios', "h1_value": 'Nuevo Servicio'})
 
 
 def servicios_vista(request):
@@ -84,7 +84,7 @@ def actualizar_servicio_vista(request, servicio_id):
         if form.is_valid():
             form.save()
             return redirect('servicios')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_servicio': actualizar_servicio, "url_value": 'reservas'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_servicio': actualizar_servicio, "url_value": 'servicios', "h1_value": 'Editar Servicio'})
 
 
 def activar_servicio(request, servicio_id):
@@ -96,7 +96,7 @@ def activar_servicio(request, servicio_id):
 
 
 def desactivar_servicio(request, servicio_id):
-    estado_servicio = Coordinador.objects.filter(id=servicio_id).first()
+    estado_servicio = Servicio.objects.filter(id=servicio_id).first()
     if estado_servicio.activo == True:
         estado_servicio.activo = False
         estado_servicio.save()
@@ -132,7 +132,7 @@ def actualizar_coordinador_vista(request, coordinador_id):
         if form.is_valid():
             form.save()
             return redirect('coordinadores')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_coordinador': actualizar_coordinador, "url_value": 'coordinadores', "h1_value": 'Editar Coordinador'})
 
 
 def activar_coordinador(request, coordinador_id):
@@ -158,7 +158,7 @@ def alta_reserva_vista(request):
         if form.is_valid():
             form.save()
             return redirect('reservas')
-    return render(request, 'form_reserva.html', {"form": form, "submit_value": "Enviar", "url_value": 'reservas'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'reservas', "h1_value": 'Nueva Reserva'})
 
 
 def reservas_vista(request):
@@ -174,7 +174,7 @@ def actualizar_reserva_vista(request, reserva_id):
         if form.is_valid():
             form.save()
             return redirect('reservas')
-    return render(request, 'form_reserva.html', {"form": form, "submit_value": "Actualizar", 'actualizar_reserva': actualizar_reserva, "url_value": 'reservas'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_reserva': actualizar_reserva, "url_value": 'reservas', "h1_value": 'Editar Reserva'})
 
 
 def eliminar_reserva(request, reserva_id):
@@ -192,7 +192,7 @@ def alta_cliente_vista(request):
         if form.is_valid():
             form.save()
             return redirect('clientes')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'clientes'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Enviar", "url_value": 'clientes',"h1_value": 'Nuevo Cliente'})
 
 
 def clientes_vista(request):
@@ -208,7 +208,7 @@ def actualizar_cliente_vista(request, cliente_id):
         if form.is_valid():
             form.save()
             return redirect('clientes')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_cliente': actualizar_cliente, "url_value": 'clientes'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_cliente': actualizar_cliente, "url_value": 'clientes',"h1_value": 'Editar Cliente'})
 
 
 def activar_cliente(request, cliente_id):

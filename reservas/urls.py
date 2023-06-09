@@ -30,6 +30,6 @@ urlpatterns =[
     path('reservas/nuevo/', views.alta_reserva_vista, name='alta_reserva'),
     path('reservas/listado', views.reservas_vista, name="reservas"),
     path('reservas/modificar/<int:reserva_id>', views.actualizar_reserva_vista, name="actualizar_reserva"),
-    path('reservas/eliminar/<int:reserva_id>', views.actualizar_reserva_vista, name="actualizar_reserva"),
+    path('reservas/eliminar/<int:reserva_id>', views.eliminar_reserva, name="eliminar_reserva"),
 
 ]

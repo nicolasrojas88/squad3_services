@@ -35,11 +35,11 @@
             <th scope="row">{{ s.id }}</th>
             <td>{{ s.nombre }}</td>
             <td>{{ s.descripcion }}</td>
-            <td>{{ s.precio }}</td>
+            <td>$ {{ s.precio }}</td>
             {% if s.activo %}
-          <td>
-              Activo
-          </td>
+            <td>
+                Activo
+            </td>
             {% else %}
             <td>
                 Inactivo

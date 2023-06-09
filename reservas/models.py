@@ -38,7 +38,7 @@ class Servicio(models.Model):
     activo = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return f"{self.nombre}"
 
 
 class Cliente(models.Model):
