@@ -5,7 +5,7 @@
 		<br>
 	</div>
 	<div class="d-grid gap-2">
-      <h1 align="center">{{ h1_value }}</h1>
+      <h1 align="center"> Modificación de Datos </h1>
     </div>
 	<div class="container px-4 text-center">
 	  <div class="row gx-5">
@@ -13,14 +13,13 @@
 			<div class="card" style="width: 30rem;">
 			  <div class="card-body">
 				  <div class="d-flex justify-content-center">
-                      <form action="#" method="post" class="col-6">
-                          {% csrf_token %}
+                      <form action="#" method="post" class="col-4">
+                            {% csrf_token %}
 
-                          {{ form.as_p }}
-
-                          <input class="btn btn-primary" type="submit" value="{{ submit_value }}">
-                          <a href="{% url url_value %}" class="btn btn-warning text-white">Volver</a>
-                      </form>
+                            {{ form.as_p }}
+                                <input class="btn btn-primary" type="submit" value="{{ submit_value }}">
+                                <a href="{% url url_value %}" class="btn btn-warning text-white">Volver</a>
+                        </form>
                   </div>
               </div>
             </div>

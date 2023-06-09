@@ -1,6 +1,6 @@
 from django import forms
-from django.forms import ModelForm
-from .models import Empleado, Coordinador
+from django.forms import ModelForm, widgets
+from .models import Empleado, Coordinador, Servicio, Cliente, Reserva
 
 
 class FormEmpleado(forms.Form):
@@ -27,4 +27,28 @@ class CoordinadorForm(ModelForm):
     class Meta:
         model = Coordinador
         fields = ['nombre', 'apellido', 'numero_documento']
-        labels = {'numero_documento': 'DNI'}
+        labels = {'numero_documento': 'Numero de DNI'}
+
+
+class ServicioForm(ModelForm):
+    class Meta:
+        model = Servicio
+        fields = ['nombre', 'descripcion', 'precio']
+        labels = {}
+
+
+class ClienteForm(ModelForm):
+    class Meta:
+        model = Cliente
+        fields = ['nombre', 'apellido']
+        labels = {}
+
+
+class ReservaForm(ModelForm):
+    class Meta:
+        model = Reserva
+        fields = ['fecha_reserva', 'cliente', 'servicio', 'precio', 'empleado', 'coordinador']
+        labels = {'fecha_reserva': 'Fecha de Reserva', 'servicio': 'Servicio Contratado', 'cliente': "Nombre Cliente "}
+        widgets = {
+            'fecha_reserva': widgets.DateInput(attrs={'type': 'date'})
+        }
