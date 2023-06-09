@@ -111,7 +111,7 @@ def actualizar_empleado_vista(request, empleado_id):
         if form.is_valid():
             form.save()
             return redirect('empleados')
-    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados', "h1_value": 'Editar Coordinador'})
+    return render(request, 'form_generico.html', {"form": form, "submit_value": "Actualizar", 'actualizar_empleado': actualizar_empleado, "url_value": 'empleados', "h1_value": 'Editar Empleado'})
 
 
 def coordinadores_vista(request):
