@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Empleado, Coordinador
+from .models import Empleado, Coordinador, Servicio, Cliente, Reserva
 
 
 class FormEmpleado(forms.Form):
@@ -28,3 +28,24 @@ class CoordinadorForm(ModelForm):
         model = Coordinador
         fields = ['nombre', 'apellido', 'numero_documento']
         labels = {'numero_documento': 'DNI'}
+
+
+class ServicioForm(ModelForm):
+    class Meta:
+        model = Servicio
+        fields = ['nombre', 'descripcion', 'precio']
+        labels = {}
+
+
+class ClienteForm(ModelForm):
+    class Meta:
+        model = Cliente
+        fields = ['nombre', 'apellido']
+        labels = {}
+
+
+class ReservaForm(ModelForm):
+    class Meta:
+        model = Reserva
+        fields = ['fecha_reserva', 'cliente', 'servicio', 'precio', 'empleado', 'coordinador']
+        labels = {'fecha_reserva': 'Fecha de Reserva'}

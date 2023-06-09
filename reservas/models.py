@@ -17,7 +17,8 @@ class Empleado(models.Model):
     activo = models.BooleanField(default=1, blank=False)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido} {self.numero_legajo}  {self.activo} "
+        return f"{self.nombre} {self.apellido}"
+
 
 class Coordinador(models.Model):
     nombre = models.CharField(max_length=50)
@@ -27,7 +28,7 @@ class Coordinador(models.Model):
     activo = models.BooleanField(default=1, blank=False)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido} {self.numero_documento} {self.fecha_alta} {self.activo} "
+        return f"{self.nombre} {self.apellido}"
 
 
 class Servicio(models.Model):
@@ -46,14 +47,17 @@ class Cliente(models.Model):
     activo = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.nombre}"
+        return f"{self.nombre} {self.apellido}"
 
 
-class ReservaServicio(models.Model):
+class Reserva(models.Model):
     fecha_creacion = models.DateField(auto_now_add=True)
     fecha_reserva = models.DateField()
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    responsable = models.ForeignKey(Coordinador, on_delete=models.CASCADE)
+    coordinador = models.ForeignKey(Coordinador, on_delete=models.CASCADE)
     empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE)
     servicio = models.ForeignKey(Servicio, on_delete=models.CASCADE)
     precio = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.cliente} {self.servicio} {self.fecha_reserva}"
